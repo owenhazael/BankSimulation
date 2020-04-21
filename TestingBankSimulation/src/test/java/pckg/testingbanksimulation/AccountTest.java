@@ -57,7 +57,7 @@ public class AccountTest {
         bank = new Bank("My Bank");
         custID = bank.addCustomer("Reynaldo", "Marin");
         Customer customer = bank.getCustomer(custID);
-        Account savings = customer.addSavingsAccount(0.00, "Test Account");
+        Account savings = customer.addSavingsAccount(0.00, "Test Account");       
     }
     
     @AfterEach
@@ -68,6 +68,7 @@ public class AccountTest {
      * Test of deposit method, of class Account.
      */
     @org.junit.jupiter.api.Test
+    @DisplayName("Account.deposit Tests")
     public void testDeposit() {
         final double initialBalance = account.getBalance();
         final double amount = 20.00;
@@ -83,16 +84,17 @@ public class AccountTest {
      * Test of withdraw method, of class Account.
      */
     @org.junit.jupiter.api.Test
+    @DisplayName("Account.withdraw Tests")
     public void testWithdraw() {
         final double balance = account.getBalance();
-        final double finalBalance
+        final double finalBalance;
         final double amount = 20.00;
         final double penalty = 30.00;
-        if balance > amount {
+        if (balance > amount) {
             account.withdraw(amount);
-            finalBalance = account.getBalance();
-        else
-            account.withdraw(amount);
+            finalBalance = account.getBalance(); }
+        else{
+            account.withdraw(amount); 
             finalBalance = account.getBalance() - penalty; }          
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -102,12 +104,14 @@ public class AccountTest {
      * Test of transfer method, of class Account.
      */
     @org.junit.jupiter.api.Test
-    public void testTransfer() {
-        System.out.println("transfer");
-        Account fromAccount = null;
-        Account toAccount = null;
-        double amount = 0.0;
-        Account.transfer(fromAccount, toAccount, amount);
+    @DisplayName("Account.transfer Tests")
+    public void testTransfer() {       
+        Account fromAccount = customer.addSavingsAccount(100.00, "First account");
+        Account toAccount = customer.addSavingsAccount(100.00, "Second account");
+        final double amount = 20.00;
+        
+        fromAccount.withdraw(amount);
+        toAccount.deposit(amount);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
