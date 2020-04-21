@@ -69,10 +69,12 @@ public class AccountTest {
      */
     @org.junit.jupiter.api.Test
     public void testDeposit() {
-        System.out.println("deposit");
-        double amount = 0.0;
-        Account instance = null;
-        instance.deposit(amount);
+        final double initialBalance = account.getBalance();
+        final double amount = 20.00;
+        account.deposit(amount);
+        final double finalBalance = account.getBalance();
+        assertEquals(finalBalance, initialBalance + amount, "Balance should be" +
+                (initialBalance + amount) + "but was " + finalBalance);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
