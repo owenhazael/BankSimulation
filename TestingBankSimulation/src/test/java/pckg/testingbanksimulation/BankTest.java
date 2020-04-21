@@ -5,7 +5,9 @@
  */
 package pckg.testingbanksimulation;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.SortedSet;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -13,26 +15,31 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.DisplayName;
 
 /**
  *
- * @author User
+ * @author Owen Bueso
  */
 public class BankTest {
-    
+    private String NAME;
+    private final Map<String, Customer> customers = new HashMap<>();
+    private double insufficientFundsPenalty = 10.00;  // Default, in dollars
     public BankTest() {
     }
     
-    @BeforeAll
-    public static void setUpClass() {
-    }
+    //@BeforeAll
+    //public static void setUpClass() {
+    //}
     
-    @AfterAll
-    public static void tearDownClass() {
-    }
+    //@AfterAll
+    //public static void tearDownClass() {
+    //}
     
     @BeforeEach
     public void setUp() {
+        NAME = ("My Bank");
+   
     }
     
     @AfterEach
@@ -43,7 +50,7 @@ public class BankTest {
      * Test of main method, of class Bank.
      */
     public void testMain() {
-        System.out.println("Hello from Bank");
+        System.out.println("Hello from My Bank");
         String[] args = null;
         Bank.main(args);
         // TODO review the generated test code and remove the default call to fail.
@@ -65,6 +72,7 @@ public class BankTest {
      * Test of setInsufficientFundsPenalty method, of class Bank.
      */
     @Test
+   @DisplayName("Bank.SetInsufficientFundPenalty Tests")
     public void testSetInsufficientFundsPenalty() {
         System.out.println("setInsufficientFundsPenalty");
         double insufficientFundsPenalty = 10.0;
@@ -87,16 +95,19 @@ public class BankTest {
      * Test of addAccountWizard method, of class Bank.
      */
     @Test
+    @DisplayName("Bank.AddAccountWizard Tests")
     public void testAddAccountWizard() {
         System.out.println("addAccountWizard");
         Bank instance = null;
         instance.addAccountWizard();
     }
 
+   
     /**
-     * Not necessary to test this Get Method since its only return Null value
+     * Test of GetAllAccounts, of class Bank.
      */
-    
+    @Test
+    @DisplayName("Bank.GetAllAccounts Tests")
     public void testGetAllAccounts() {
         System.out.println("getAllAccounts");
         Bank instance = null;
@@ -119,12 +130,13 @@ public class BankTest {
      * Test of addCustomer method, of class Bank.
      */
     @Test
+    @DisplayName("Bank.AddCustomer Tests")
     public void testAddCustomer() {
         System.out.println("addCustomer");
-        String lastName = "";
-        String firstName = "";
+        String lastName = "Bueso";
+        String firstName = "Owen";
         Bank instance = null;
-        String expResult = "";
+        String expResult = "Owen Bueso";
         String result = instance.addCustomer(lastName, firstName);
         assertEquals(expResult, result);
     }
@@ -133,6 +145,7 @@ public class BankTest {
      * Test of removeCustomer method, of class Bank.
      */
     @Test
+    @DisplayName("Bank.RemoveCustomer Tests")
     public void testRemoveCustomer() {
         System.out.println("removeCustomer");
         String customerId = "";
@@ -144,6 +157,7 @@ public class BankTest {
      * Test of getAllCustomers method, of class Bank.
      */
     @Test
+     @DisplayName("Bank.GetAllCustomers Tests")
     public void testGetAllCustomers() {
         System.out.println("getAllCustomers");
         Bank instance = null;
@@ -156,9 +170,10 @@ public class BankTest {
      * Test of getCustomer method, of class Bank.
      */
     @Test
+    @DisplayName("Bank.GetCustomer_String Tests")
     public void testGetCustomer_String() {
         System.out.println("getCustomer");
-        String customerId = "";
+        String customerId = "001";
         Bank instance = null;
         Customer expResult = null;
         Customer result = instance.getCustomer(customerId);
@@ -169,22 +184,25 @@ public class BankTest {
      * Test of getCustomer method, of class Bank.
      */
     @Test
+     @DisplayName("Bank.RemoveCustomer_String_String Tests")
     public void testGetCustomer_String_String() {
         System.out.println("getCustomer");
-        String lastName = "";
-        String firstName = "";
+        String lastName = "Bueso";
+        String firstName = "Owen";
         Bank instance = null;
         List<Customer> expResult = null;
         List<Customer> result = instance.getCustomer(lastName, firstName);
         assertEquals(expResult, result);
     }
 
-    /**
-     * Not necessary to test this Get Method since its only return a Null value
+     /**
+     * Test of getCustomer method, of class Bank.
      */
+     @Test
+     @DisplayName("Bank.GetCustomerAccounts Tests")
     public void testGetCustomersAccounts() {
         System.out.println("getCustomersAccounts");
-        String customerId = "";
+        String customerId = "001";
         Bank instance = null;
         List<Account> expResult = null;
         List<Account> result = instance.getCustomersAccounts(customerId);

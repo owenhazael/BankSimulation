@@ -111,7 +111,7 @@ public class CustomerTest {
      * Test of getCustomerAccounts method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.GetCustomerAccounts Tests")
+    @DisplayName("Customer.GetCustomerAccounts Tests")
     public void testGetCustomerAccounts() {
         System.out.println("getCustomerAccounts");
         Customer instance = null;
@@ -125,7 +125,7 @@ public class CustomerTest {
      * Test of ytdFees method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.YtdFees Tests")
+    @DisplayName("Customer.YtdFees Tests")
     public void testYtdFees() {
         System.out.println("ytdFees");
         Customer instance = null;
@@ -142,7 +142,7 @@ public class CustomerTest {
      * Test of ytdInterest method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.YtdInterest Tests")
+    @DisplayName("Customer.YtdInterest Tests")
     public void testYtdInterest() {
         System.out.println("ytdInterest");
         Customer instance = null;
@@ -160,7 +160,7 @@ public class CustomerTest {
      * Test of addSavingsAccount method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.AddSavingsAccount Tests")
+    @DisplayName("Customer.AddSavingsAccount Tests")
     public void testAddSavingsAccount() {
         System.out.println("addSavingsAccount");
         double initBal = 0.0;
@@ -176,7 +176,7 @@ public class CustomerTest {
      * Test of removeAccount method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.RemoveAccount Tests")
+    @DisplayName("Customer.RemoveAccount Tests")
     public void testRemoveAccount() {
         System.out.println("removeAccount");
         String accountId = "001234";
@@ -189,7 +189,7 @@ public class CustomerTest {
      * Test of getAccount method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.GetAccount Tests")
+    @DisplayName("Customer.GetAccount Tests")
     public void testGetAccount() {
         System.out.println("getAccount");
         String accountId = "001233";
@@ -217,7 +217,7 @@ public class CustomerTest {
      * Test of hashCode method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.HashCode Tests")
+    @DisplayName("Customer.HashCode Tests")
     public void testHashCode() {
         System.out.println("hashCode");
         Customer instance = null;
@@ -231,7 +231,7 @@ public class CustomerTest {
      * Test of equals method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.Equals Tests")
+    @DisplayName("Customer.Equals Tests")
     public void testEquals() {
         System.out.println("equals");
         Object obj = null;
@@ -246,7 +246,7 @@ public class CustomerTest {
      * Test of compareTo method, of class Customer.
      */
     @Test
-    @DisplayName("Bank.CompareTo Tests")
+    @DisplayName("Customer.CompareTo Tests")
     public void testCompareTo() {
         System.out.println("compareTo");
         Customer other = null;
