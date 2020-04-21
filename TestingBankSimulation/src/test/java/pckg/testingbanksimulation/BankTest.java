@@ -47,7 +47,7 @@ public class BankTest {
     }
 
     /**
-     * Test of main method, of class Bank.
+     * Not necessary to test the main method;
      */
     public void testMain() {
         System.out.println("Hello from My Bank");
@@ -92,10 +92,9 @@ public class BankTest {
     }
 
     /**
-     * Test of addAccountWizard method, of class Bank.
+     * Not necessary to test since its a GUI function.
      */
-    @Test
-    @DisplayName("Bank.AddAccountWizard Tests")
+   
     public void testAddAccountWizard() {
         System.out.println("addAccountWizard");
         Bank instance = null;
@@ -117,9 +116,9 @@ public class BankTest {
     }
 
     /**
-     * Test of addCustomerWizard method, of class Bank.
+     * Not necessary to test since its a GUI function.
      */
-    @Test
+
     public void testAddCustomerWizard() {
         System.out.println("addCustomerWizard");
         Bank instance = null;
@@ -184,7 +183,7 @@ public class BankTest {
      * Test of getCustomer method, of class Bank.
      */
     @Test
-     @DisplayName("Bank.RemoveCustomer_String_String Tests")
+     @DisplayName("Bank.GetCustomer_String_String Tests")
     public void testGetCustomer_String_String() {
         System.out.println("getCustomer");
         String lastName = "Bueso";
