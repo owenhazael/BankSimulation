@@ -17,7 +17,6 @@ GetCustomerAccounts: Tested to get customer accounty by the customer ID.
 
 
 
-
 Class Customer: Test by Owen Bueso
 Before annotation with bank object, customerID and last and first name.
 
