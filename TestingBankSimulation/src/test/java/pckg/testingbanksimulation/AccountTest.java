@@ -84,10 +84,16 @@ public class AccountTest {
      */
     @org.junit.jupiter.api.Test
     public void testWithdraw() {
-        System.out.println("withdraw");
-        double amount = 0.0;
-        Account instance = null;
-        instance.withdraw(amount);
+        final double balance = account.getBalance();
+        final double finalBalance
+        final double amount = 20.00;
+        final double penalty = 30.00;
+        if balance > amount {
+            account.withdraw(amount);
+            finalBalance = account.getBalance();
+        else
+            account.withdraw(amount);
+            finalBalance = account.getBalance() - penalty; }          
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
