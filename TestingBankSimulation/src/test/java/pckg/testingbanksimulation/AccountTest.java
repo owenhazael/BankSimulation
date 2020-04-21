@@ -20,6 +20,11 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class AccountTest {
     
+    private Bank bank;
+    private Customer customer;
+    private String custID;
+    private Account account;
+    
     public AccountTest() {
     }
 
@@ -49,6 +54,10 @@ public class AccountTest {
     
     @BeforeEach
     public void setUp() {
+        bank = new Bank("My Bank");
+        custID = bank.addCustomer("Reynaldo", "Marin");
+        Customer customer = bank.getCustomer(custID);
+        Account savings = customer.addSavingsAccount(0.00, "Test Account");
     }
     
     @AfterEach
