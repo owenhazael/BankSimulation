@@ -7,11 +7,7 @@ package pckg.testingbanksimulation;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -28,21 +24,21 @@ public class AccountTest {
     public AccountTest() {
     }
 
-    @org.junit.jupiter.api.BeforeAll
-    public static void setUpClass() throws Exception {
-    }
+   // @org.junit.jupiter.api.BeforeAll
+   // public static void setUpClass() throws Exception {
+   // }
 
-    @org.junit.jupiter.api.AfterAll
-    public static void tearDownClass() throws Exception {
-    }
+   // @org.junit.jupiter.api.AfterAll
+    //public static void tearDownClass() throws Exception {
+    //}
 
-    @org.junit.jupiter.api.BeforeEach
-    public void setUp() throws Exception {
-    }
+    //@org.junit.jupiter.api.BeforeEach
+    //public void setUp() throws Exception {
+    //}
 
-    @org.junit.jupiter.api.AfterEach
-    public void tearDown() throws Exception {
-    }
+    //@org.junit.jupiter.api.AfterEach
+    //public void tearDown() throws Exception {
+    //}
     
     @BeforeAll
     public static void setUpClass() {
@@ -67,23 +63,22 @@ public class AccountTest {
     /**
      * Test of deposit method, of class Account.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Account.deposit Tests")
     public void testDeposit() {
         final double initialBalance = account.getBalance();
         final double amount = 20.00;
         account.deposit(amount);
         final double finalBalance = account.getBalance();
-        assertEquals(finalBalance, initialBalance + amount, "Balance should be" +
+        assertEquals(finalBalance, initialBalance + amount, "Balance should be " +
                 (initialBalance + amount) + "but was " + finalBalance);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
      * Test of withdraw method, of class Account.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Account.withdraw Tests")
     public void testWithdraw() {
         final double balance = account.getBalance();
@@ -97,13 +92,12 @@ public class AccountTest {
             account.withdraw(amount); 
             finalBalance = account.getBalance() - penalty; }          
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
      * Test of transfer method, of class Account.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     @DisplayName("Account.transfer Tests")
     public void testTransfer() {       
         Account fromAccount = customer.addSavingsAccount(100.00, "First account");
@@ -113,7 +107,6 @@ public class AccountTest {
         fromAccount.withdraw(amount);
         toAccount.deposit(amount);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -133,14 +126,12 @@ public class AccountTest {
     /**
      * Test of setAccountDescription method, of class Account.
      */
-    @org.junit.jupiter.api.Test
+    @Test //In progress...
     public void testSetAccountDescription() {
-        System.out.println("setAccountDescription");
-        String accountDescription = "";
-        Account instance = null;
-        instance.setAccountDescription(accountDescription);
+         String description = "Hope is right.";
+         Account instance = new Account();
+         
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
