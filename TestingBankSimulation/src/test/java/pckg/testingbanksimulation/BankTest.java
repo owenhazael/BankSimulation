@@ -50,9 +50,9 @@ public class BankTest {
     }
 
     /**
-     * Test of getInsufficientFundsPenalty method, of class Bank.
+     * Not necessary to test this Get Method since its only return the Constant InsufficientFundPenalty
      */
-    @Test
+    
     public void testGetInsufficientFundsPenalty() {
         System.out.println("getInsufficientFundsPenalty");
         Bank instance = null;
@@ -67,15 +67,14 @@ public class BankTest {
     @Test
     public void testSetInsufficientFundsPenalty() {
         System.out.println("setInsufficientFundsPenalty");
-        double insufficientFundsPenalty = 0.0;
+        double insufficientFundsPenalty = 10.0;
         Bank instance = null;
         instance.setInsufficientFundsPenalty(insufficientFundsPenalty);
     }
 
     /**
-     * Test of getNAME method, of class Bank.
+     * Not necessary to test this Get Method since its only return the string Name
      */
-    @Test
     public void testGetNAME() {
         System.out.println("getNAME");
         Bank instance = null;
@@ -95,9 +94,9 @@ public class BankTest {
     }
 
     /**
-     * Test of getAllAccounts method, of class Bank.
+     * Not necessary to test this Get Method since its only return Null value
      */
-    @Test
+    
     public void testGetAllAccounts() {
         System.out.println("getAllAccounts");
         Bank instance = null;
@@ -181,9 +180,8 @@ public class BankTest {
     }
 
     /**
-     * Test of getCustomersAccounts method, of class Bank.
+     * Not necessary to test this Get Method since its only return a Null value
      */
-    @Test
     public void testGetCustomersAccounts() {
         System.out.println("getCustomersAccounts");
         String customerId = "";
