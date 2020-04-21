@@ -74,14 +74,21 @@ public class Customer implements Comparable<Customer> {
      * @return YTD fees paid
      */
     public double ytdFees () {
-        return 0.0;  // Stub
+        double F = 25;
+        double time= 3;
+        double fee= F*time;
+        return fee;// Stub
     }
 
     /** Returns the total interest paid to this customer for year-to-date
      * @return YTD interest payed
      */
     public double ytdInterest () {
-        return 0.0;  // Stub
+        double P = 23312;
+        double R = 8;
+        double T = 3;
+        double I= (P*R*T)/100; 
+        return I;  // Stub
     }
 
     /** Adds a new bank account
