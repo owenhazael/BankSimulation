@@ -1,0 +1,37 @@
+Class Bank: Test by Owen Bueso
+Before annotation in the string Name
+
+Methods in sequential order Tested or not Tested:
+Main: Not necessary to test since its only outputs a string line
+GetInssuficientPenalty: Not necessary to test this Get Method since its only return the Constant InsufficientFundPenalty
+SetInsufficientPenalty: Tested to set insufficient penalty on accounts that are met with the required Penalty.
+GEtNAME:Not necessary to test this Get Method since its only return the string Name
+AddAcountWizard: Not necessary to test since its a GUI function.
+GetAllAccounts: Tested to get aal account from the sorted set Account
+AddCustomerWizard: Not necessary to test since its a GUI function.
+RemoveCustomer: Tested to Remove a customer by the customerID.
+GetAllCustomers: Tested to get all customers from sortedset Customer
+GetCustomer_String: Tested to getCustomer by Customer ID.
+GetCustomer_STRING_STRING: Tested to get Customer and display by lastname and first name
+GetCustomerAccounts: Tested to get customer accounty by the customer ID.
+
+
+
+
+Class Customer: Test by Owen Bueso
+Before annotation with bank object, customerID and last and first name.
+
+GetBank:  Not necessary to test since its only return the Bank value.
+GetCustomerId: Tested to return the customer ID.
+GetLastName: Not necessary to test this Get Method since its only return Last Name of Customer
+GetFirstName: Not necessary to test this Get Method since its only return First Name of Customer
+GetCustomerAccounts: Tested to get customer accounts.
+YtdFees: Tested to see what will be the total fees over the years.
+YtdInterested: Tested to see the interest over the years.
+AddSavingsAccounts: Tested to add savings accounts with a initial balance of 0
+RemoveAccounts: Tested to remove by account ID.
+GetAccount: Tested to get account by the account ID. 
+ToString: Not necessary to test since its only a toString method.
+HashCode: Tested to get hashcode.
+Equals: Tested to see the Equal of Customer.
+CompareTo: Tested to compare to other customer. 
