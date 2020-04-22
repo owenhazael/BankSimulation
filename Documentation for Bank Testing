@@ -34,3 +34,23 @@ ToString: Not necessary to test since its only a toString method.
 HashCode: Tested to get hashcode.
 Equals: Tested to see the Equal of Customer.
 CompareTo: Tested to compare to other customer. 
+
+
+Class Account: Test by Reynaldo Marin
+@Before annotation with bank object, customer ID and created account savings.
+
+testDeposit: Tested to deposit a certain amount of money into an account.
+testWithdraw: Tested to withdraw a certain amount of money from an account.
+testTransfer: Tested to withdraw money from an account and doposit it into another.
+testGetAccountDespription: Not necessary to test this Get method since it only return Account description.
+testSetAccountDescription: Tested to assign a desciption to an account.
+testGetBalance: Not necessary to test this Get method since it only returns account Balance.
+testGetTransactions: Not necessary to test this Get method since it only returns a list of all transactions of an account.
+testGetTransaction: Not necessary to test this Get method since it only returns a specific transaction. 
+testGetAccountId: Not necessary to test this Get method since it only returns an account ID.
+testGetCustomerId: Not necessary to test this Get method since it only returns a customer ID.
+testGetAccountCreationDate: Not necessary to test this Get method since  it only returns the creating date of an account.
+testHashCode: Tested to get hashcode.
+testEquals: Tested to see the equal of Account.
+testCompareTo: Tested to compare to other customer.
+testToString: Not necessary to test since its only a toString method.
