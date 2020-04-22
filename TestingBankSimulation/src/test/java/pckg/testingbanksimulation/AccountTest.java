@@ -126,7 +126,7 @@ public class AccountTest {
     }
 
     /**
-     * Test of getTransactions method, of class Account.
+     * Not necessary.
      */
     @org.junit.jupiter.api.Test
     public void testGetTransactions() {
@@ -138,7 +138,7 @@ public class AccountTest {
     }
 
     /**
-     * Test of getTransaction method, of class Account.
+     * Not necessary.
      */
     @org.junit.jupiter.api.Test
     public void testGetTransaction() {
@@ -175,7 +175,7 @@ public class AccountTest {
     }
 
     /**
-     * Test of getAccountCreationDate method, of class Account.
+     * Not necessary.
      */
     @org.junit.jupiter.api.Test
     public void testGetAccountCreationDate() {
