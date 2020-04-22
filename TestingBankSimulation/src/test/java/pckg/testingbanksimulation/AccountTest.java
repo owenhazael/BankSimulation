@@ -20,26 +20,11 @@ public class AccountTest {
     private Customer customer;
     private String custID;
     private Account account;
+    private String account1Description;
     
     public AccountTest() {
     }
-
-   // @org.junit.jupiter.api.BeforeAll
-   // public static void setUpClass() throws Exception {
-   // }
-
-   // @org.junit.jupiter.api.AfterAll
-    //public static void tearDownClass() throws Exception {
-    //}
-
-    //@org.junit.jupiter.api.BeforeEach
-    //public void setUp() throws Exception {
-    //}
-
-    //@org.junit.jupiter.api.AfterEach
-    //public void tearDown() throws Exception {
-    //}
-    
+   
     @BeforeAll
     public static void setUpClass() {
     }
@@ -72,7 +57,6 @@ public class AccountTest {
         final double finalBalance = account.getBalance();
         assertEquals(finalBalance, initialBalance + amount, "Balance should be " +
                 (initialBalance + amount) + "but was " + finalBalance);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -91,7 +75,6 @@ public class AccountTest {
         else{
             account.withdraw(amount); 
             finalBalance = account.getBalance() - penalty; }          
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -102,11 +85,9 @@ public class AccountTest {
     public void testTransfer() {       
         Account fromAccount = customer.addSavingsAccount(100.00, "First account");
         Account toAccount = customer.addSavingsAccount(100.00, "Second account");
-        final double amount = 20.00;
-        
+        final double amount = 20.00;       
         fromAccount.withdraw(amount);
         toAccount.deposit(amount);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -119,19 +100,17 @@ public class AccountTest {
         String expResult = "";
         String result = instance.getAccountDescription();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
      * Test of setAccountDescription method, of class Account.
      */
-    @Test //In progress...
+    @Test
+    @DisplayName("Account.setAccountDescription Tests")
     public void testSetAccountDescription() {
-         String description = "Hope is right.";
-         Account instance = new Account();
-         
-        // TODO review the generated test code and remove the default call to fail.
+         final String accountDescription = "This is everyday checking.";
+         final String account1Description;
+         this.account1Description = accountDescription;
     }
 
     /**
@@ -144,8 +123,6 @@ public class AccountTest {
         double expResult = 0.0;
         double result = instance.getBalance();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -158,8 +135,6 @@ public class AccountTest {
         List<Transaction> expResult = null;
         List<Transaction> result = instance.getTransactions();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -173,8 +148,6 @@ public class AccountTest {
         Transaction expResult = null;
         Transaction result = instance.getTransaction(transactionId);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -187,8 +160,6 @@ public class AccountTest {
         String expResult = "";
         String result = instance.getAccountId();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -201,8 +172,6 @@ public class AccountTest {
         String expResult = "";
         String result = instance.getCustomerId();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -215,8 +184,6 @@ public class AccountTest {
         LocalDateTime expResult = null;
         LocalDateTime result = instance.getAccountCreationDate();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -229,8 +196,6 @@ public class AccountTest {
         int expResult = 0;
         int result = instance.hashCode();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -244,8 +209,6 @@ public class AccountTest {
         boolean expResult = false;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -259,12 +222,10 @@ public class AccountTest {
         int expResult = 0;
         int result = instance.compareTo(other);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
-     * Test of toString method, of class Account.
+     * Not necessary.
      */
     @org.junit.jupiter.api.Test
     public void testToString() {
@@ -273,8 +234,6 @@ public class AccountTest {
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     public class AccountImpl extends Account {
