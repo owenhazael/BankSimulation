@@ -54,3 +54,16 @@ testHashCode: Tested to get hashcode.
 testEquals: Tested to see the equal of Account.
 testCompareTo: Tested to compare to other customer.
 testToString: Not necessary to test since its only a toString method.
+
+Class: SavingsAccount, Test by Roland Colon III
+testDeposit: Tests a customer depositing positive double amount of money into their savings account.
+
+testWithdraw: Tests a customer withdrawing money from savings account, if money being withdrawn is less than the amount in savings
+the balance is withdrawn and the savings account is balanced, else if the amount being withdrawn is more than the amount in the savings account
+balance a penalty is added to the withdraw.
+
+testAddInterestTransaction: adds an interest rate onto a transation in the savings account.
+
+testGetDefaultInterestRate: retrieves the default interest rate for savings account.
+
+testSetDefaultInterestRate: sets the defualt interest rate from the get method to the savings account.
